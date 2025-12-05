@@ -10,4 +10,4 @@ services:
       - key: PING_URL
         value: "https://shopsphereapi.azurewebsites.net/WeatherForecast"
       - key: PING_INTERVAL
-        value: "600000" # 10 minutes
+        value: "30000" # 10 minutes
