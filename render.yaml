@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: keep-alive-pinger
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    autoDeploy: true
+    envVars:
+      - key: PING_URL
+        value: "https://shopsphereapi.azurewebsites.net/WeatherForecast"
+      - key: PING_INTERVAL
+        value: "300000" # 10 minutes in ms (use 30000 for 30 seconds)
